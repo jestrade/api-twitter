@@ -1,15 +1,15 @@
 const nodemailer = require("nodemailer");
 const { config } = require("./../../config");
-console.log("config.mailer", config.mailer);
-console.log("config.mail", config.mail);
+
+const { host, port, user, password } = config.mailer;
 
 const transporter = nodemailer.createTransport({
-  host: config.mailer.host,
-  port: Number(config.mailer.port),
-  secure: false, // true for 465, false for other ports
+  host: host,
+  port: Number(port),
+  secure: false,
   auth: {
-    user: config.mailer.user, // generated ethereal user
-    pass: config.mailer.password, // generated ethereal password
+    user: user,
+    pass: password,
   },
 });
 

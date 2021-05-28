@@ -26,6 +26,8 @@ router.route("/comments").post(authenticator, validateComment, createComment);
 
 router.route("/likes").post(authenticator, likes);
 
-router.route("/external/:username").get(getExternalTweetsByUsername);
+router
+  .route("/external/:username")
+  .get(authenticator, getExternalTweetsByUsername);
 
 module.exports = router;

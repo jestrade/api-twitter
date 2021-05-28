@@ -1,5 +1,7 @@
-const mongoose = require('mongoose');
-const { config } = require('../config');
+const mongoose = require("mongoose");
+const { config } = require("../config");
+
+const { connectionString } = config.database;
 
 const init = async () => {
   const options = {
@@ -10,8 +12,8 @@ const init = async () => {
   };
 
   try {
-    await mongoose.connect(config.database.connectionString, options);
-    console.log('Connected to the database sucessfully!');
+    await mongoose.connect(connectionString, options);
+    console.log("Connected to the database sucessfully!");
   } catch (err) {
     console.error(
       `Error connecting to database ->`,
@@ -20,4 +22,8 @@ const init = async () => {
   }
 };
 
-module.exports = { init };
+const disconnect = () => {
+  mongoose.connection.close();
+};
+
+module.exports = { init, disconnect };

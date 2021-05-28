@@ -7,6 +7,7 @@ const { localization } = require("./middleware/localization");
 
 const users = require("./users/router");
 const tweets = require("./tweets/router");
+const tasks = require("./tasks/router");
 const weather = require("./weather/router");
 
 const { config } = require("../config");
@@ -22,6 +23,7 @@ router.use(morgan("combined", { stream: logStream }));
 router.use(localization);
 router.use("/users", users);
 router.use("/tweets", tweets);
+router.use("/tasks", tasks);
 router.use("/weather", weather);
 
 module.exports = router;

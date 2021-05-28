@@ -273,7 +273,9 @@ body:
    </td>
    <td>List all tweets
 <p>
-<strong><code>public</code></strong>
+<strong><code>private</code></strong>
+<strong><code>
+- Authentication</code></strong>
    </td>
    <td>Create tweet
 <p>
@@ -423,6 +425,41 @@ body:
    <td>error
    </td>
    <td>error
+   </td>
+  </tr>
+
+  <tr>
+   <td>/tasks
+   </td>
+   <td>List all tasks
+<p>
+<strong><code>public</code></strong>
+   </td>
+   <td>Create task
+<p>
+body:
+<p>
+<code>{</code>
+<p>
+<code>content</code>
+<p>
+<code>}</code>
+<p>
+<strong><code>public</code></strong>
+   </td>
+   <td>error
+   </td>
+   <td>Delete task
+<p>
+body:
+<p>
+<code>{</code>
+<p>
+<code>id</code>
+<p>
+<code>}</code>
+<p>
+<strong><code>public</code></strong>
    </td>
   </tr>
 </table>
