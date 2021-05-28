@@ -8,7 +8,6 @@ const { host, port } = config.http;
 
 const corsOptions = {
   credentials: true,
-  origin: "http://app.herokuapp.com:3000",
 };
 
 const app = express();
