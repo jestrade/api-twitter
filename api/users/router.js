@@ -11,7 +11,7 @@ router.use(logger);
 
 router
   .route("/")
-  .get(authenticator, list)
+  .get(list)
   .delete(authenticator, usersAuthorization, remove)
   .post(validateUser, create);
 

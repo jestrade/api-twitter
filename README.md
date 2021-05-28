@@ -273,9 +273,7 @@ body:
    </td>
    <td>List all tweets
 <p>
-<strong><code>private:</code></strong>
-<strong><code>
-- Authentication</code></strong>
+<strong><code>public</code></strong>
    </td>
    <td>Create tweet
 <p>
