@@ -121,13 +121,9 @@ Run project with nodemon
 > npm run test
 ```
 
-## URL live
-
-https://jestrade-twitter-api.herokuapp.com
-
 ## Access points
 
-https://jestrade-twitter-api.herokuapp.com/api/*
+domain/api/\*
 
 ## API
 
