@@ -8,23 +8,8 @@ Academic purpose
 
 - [Node](https://nodejs.org/)
 - NPM, built into Node.
-- [Yarn](https://yarnpkg.com/getting-started/install)
 - [MongoDB](https://www.mongodb.com/try/download/community) or [MondoDB Atlas](https://www.mongodb.com/cloud/atlas2)
 - [Postman](https://www.postman.com/) or [Insomnia](https://insomnia.rest/) or any client api rest.
-
-## Before starting
-
-Make sure you have yarn installed, run on console.
-
-```sh
-> yarn --version
-```
-
-If it return an error, please install [yarn](https://yarnpkg.com/getting-started/install).
-
-```sh
-> npm install -g yarn
-```
 
 ## Clone the repo
 
@@ -41,7 +26,7 @@ If it return an error, please install [yarn](https://yarnpkg.com/getting-started
 ## Install the app
 
 ```sh
-> yarn
+> npm i
 ```
 
 ## Create .env file
@@ -103,13 +88,13 @@ TWITTER_TOKEN_SECRET=
 ## Install nodemon as development dependency
 
 ```sh
-> yarn add -D nodemon
+> npm i --save-dev nodemon
 ```
 
 ## Run the seeds
 
 ```sh
-> yarn run seeds
+> npm run seeds
 ```
 
 ## Run the app
@@ -119,7 +104,7 @@ TWITTER_TOKEN_SECRET=
 Run project without nodemon
 
 ```sh
-> yarn start
+> npm start
 ```
 
 ### With nodemon
@@ -127,13 +112,13 @@ Run project without nodemon
 Run project with nodemon
 
 ```sh
-> yarn run dev
+> npm run dev
 ```
 
 ### Run tests
 
 ```sh
-> yarn run test
+> npm run test
 ```
 
 ## URL live
