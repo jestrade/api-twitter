@@ -138,7 +138,11 @@ Run project with nodemon
 
 ## URL live
 
-https://api-twitter.herokuapp.com
+https://jestrade-twitter-api.herokuapp.com
+
+## Access points
+
+https://jestrade-twitter-api.herokuapp.com/api/*
 
 ## API
 
