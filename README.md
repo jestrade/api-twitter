@@ -125,6 +125,15 @@ Run project with nodemon
 
 domain/api/\*
 
+## Authenticacion
+
+´´´
+headers:
+{
+x-access-token: ""
+}
+´´´
+
 ## API
 
 <table>
@@ -179,6 +188,8 @@ body:
 <code>username,</code>
 <p>
 <code>password</code>
+<p>
+<code>passwordConfirmation</code>
 <p>
 <code>}</code>
 <p>
