@@ -70,6 +70,17 @@ const likes = (req, res) => {
     });
 };
 
+const getTweet = async (req, res) => {
+  const tweetId = req.params.id;
+  await Tweet.findById({ _id: tweetId })
+    .then((data) => {
+      res.status(200).json(data);
+    })
+    .catch((err) => {
+      res.status(200).json(err);
+    });
+};
+
 const destroyTweet = async (req, res) => {
   const { tweetId, userId } = req.body;
 
@@ -115,4 +126,5 @@ module.exports = {
   likes,
   destroyTweet,
   getExternalTweetsByUsername,
+  getTweet,
 };
