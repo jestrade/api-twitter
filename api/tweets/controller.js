@@ -74,7 +74,6 @@ const getTweet = async (req, res) => {
   const tweetId = req.params.id;
   await Tweet.findById({ _id: tweetId })
     .then((data) => {
-      console.log(data);
       res.status(200).json(data);
     })
     .catch((err) => {
