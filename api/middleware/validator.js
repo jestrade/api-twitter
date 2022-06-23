@@ -87,11 +87,11 @@ const validateUser = (req, res, next) => {
     if (password !== passwordConfirmation) {
       errors.push(locale.translate("errors.validate.passwordsDontMatch"));
     }
-
+    /*
     if (!regExpPassword.test(password)) {
       errors.push(locale.translate("errors.validate.invalidPassword"));
     }
-
+    */
     if (!regExpRole.test(role)) {
       errors.push("errors.validate.invalidRole");
     }
