@@ -6,12 +6,8 @@ const { config } = require("../config");
 
 const { host, port } = config.http;
 
-const corsOptions = {
-  credentials: true,
-};
-
 const app = express();
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 app.use("/api", api);
