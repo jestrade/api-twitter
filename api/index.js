@@ -1,8 +1,8 @@
 const express = require("express");
-const morgan = require("morgan");
+// const morgan = require("morgan");
 const helmet = require("helmet");
-const fs = require("fs");
-const path = require("path");
+// const fs = require("fs");
+// const path = require("path");
 const { localization } = require("./middleware/localization");
 
 const users = require("./users/router");
