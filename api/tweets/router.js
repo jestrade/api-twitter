@@ -5,6 +5,7 @@ const {
   createComment,
   likes,
   destroyTweet,
+  getTweet,
   getExternalTweetsByUsername,
 } = require("./controller");
 const { logger } = require("../middleware/logger");
@@ -21,7 +22,7 @@ router
   .get(authenticator, list)
   .post(authenticator, validateTweet, create)
   .delete(authenticator, tweetsAuthorization, destroyTweet);
-
+router.route("/:id").get(getTweet);
 router.route("/comments").post(authenticator, validateComment, createComment);
 
 router.route("/likes").post(authenticator, likes);
