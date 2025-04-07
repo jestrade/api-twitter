@@ -83,10 +83,14 @@ const login = async (req, res) => {
           message: "ok",
         });
     } else {
-      res.json({ message: locale.translate("errors.user.userNotExists") });
+      res
+        .status(500)
+        .json({ message: locale.translate("errors.user.userNotExists") });
     }
   } else {
-    res.json({ message: locale.translate("errors.user.userNotExists") });
+    res
+      .status(500)
+      .json({ message: locale.translate("errors.user.userNotExists") });
   }
 };
 
