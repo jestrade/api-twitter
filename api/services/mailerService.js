@@ -14,6 +14,11 @@ const transporter = nodemailer.createTransport({
 });
 
 const newAccount = async (to) => {
+  if (!host || !port || !user || !password) {
+    console.log("Mailer data not defined");
+
+    return;
+  }
   try {
     await transporter.sendMail({
       from: config.mail,
